@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Para ti 💜</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Contenido principal -->
+    <div class="contenido">
+        <h1 class="titulo">Para Gracie Coc 💜</h1>
+        <button class="btn" onclick="abrirPopup()">Entra a la pagina.</button>
+    </div>
+
+    <!-- Popup -->
+    <div class="popup" id="popup">
+        <div class="popup-contenido">
+            <h2>Ingresa la contraseña amorrrr 💜</h2>
+            <input type="text" id="password" placeholder="Pista: Cuando te pedi">
+            <p id="error"></p>
+
+            <button onclick="verificar()">Entrar</button>
+            <button onclick="cerrarPopup()">Cancelar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

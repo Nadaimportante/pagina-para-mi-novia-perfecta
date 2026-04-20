@@ -1,0 +1,348 @@
+/* Fondo */
+body {
+    margin: 0;
+    font-family: Arial;
+    color: white;
+
+    background:
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)),
+        url("Collagesi.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 20px;
+    animation: fadeIn 1.5s ease;
+}
+
+/* Galería */
+.galeria {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Polaroid */
+.polaroid {
+    background: white;
+    color: black;
+    padding: 10px;
+    width: 200px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    transform: rotate(-2deg);
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.polaroid img {
+    width: 100%;
+}
+
+.polaroid:hover {
+    transform: scale(1.1) rotate(0deg);
+}
+
+/* Botón */
+.btn-sorpresa {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 25px;
+
+    border: none;
+    border-radius: 25px;
+
+    background: linear-gradient(135deg, #9d4edd, #c77dff);
+    color: white;
+
+    cursor: pointer;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.8);
+
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+
+    animation: scaleIn 0.5s;
+}
+
+.modal img {
+    width: 300px;
+}
+
+.cerrar {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+/* Popup */
+.popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    background: rgba(0,0,0,0.8);
+    padding: 15px;
+    border-radius: 10px;
+
+    display: none;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes scaleIn {
+    from {transform: scale(0.7);}
+    to {transform: scale(1);}
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    color: white;
+
+    background:
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)),
+        url("Collagesi.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+@keyframes fondoAnimado {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+.secciones {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.card {
+    background: rgba(0,0,0,0.6);
+    padding: 20px;
+    margin: 20px 0;
+
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+
+    animation: fadeInUp 1s ease;
+}
+
+.card h2 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.corazones {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.corazon {
+    position: absolute;
+    font-size: 20px;
+    opacity: 0;
+    animation: aparecerDesaparecer 4s ease-in-out forwards;
+}
+
+@keyframes aparecerDesaparecer {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    30% {
+        opacity: 0.8;
+        transform: scale(1);
+    }
+    70% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1.3);
+        opacity: 0;
+    }
+}
+
+.particulas {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+
+    background-image:
+        radial-gradient(circle, rgba(255,255,255,0.2) 1px, transparent 1px);
+
+    background-size: 50px 50px;
+
+    animation: moverParticulas 20s linear infinite;
+}
+
+@keyframes moverParticulas {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .galeria {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .polaroid {
+        width: 90%;
+    }
+
+    .card {
+        margin: 15px;
+    }
+
+    .header h1 {
+        font-size: 2em;
+    }
+}
+
+/* Sección */
+.video-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+/* Marco estilo antiguo */
+.video-marco {
+    width: 320px;
+    margin: auto;
+    padding: 15px;
+
+    background: #111;
+    border: 8px solid #333;
+    border-radius: 20px;
+
+    box-shadow: 
+        0 0 20px rgba(0,0,0,0.8),
+        inset 0 0 15px rgba(0,0,0,0.8);
+
+    position: relative;
+}
+
+/* Pantalla efecto CRT */
+.video-marco::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: repeating-linear-gradient(
+        rgba(255,255,255,0.05) 0px,
+        rgba(255,255,255,0.05) 1px,
+        transparent 2px
+    );
+
+    pointer-events: none;
+}
+
+/* Contenedor */
+.video-preview {
+    width: 320px;
+    height: 200px;
+    margin: auto;
+    position: relative;
+
+    cursor: pointer;
+    border-radius: 15px;
+    overflow: hidden;
+
+    box-shadow: 0 0 20px rgba(0,0,0,0.8);
+}
+
+/* Imagen */
+.video-preview {
+    width: 800px;
+    height: 500px;
+    margin: auto;
+    position: relative;
+
+    cursor: pointer;
+    border-radius: 15px;
+    overflow: hidden;
+
+    box-shadow: 0 0 20px rgba(0,0,0,0.8);
+}
+
+.video-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background: rgba(0,0,0,0.6);
+    color: white;
+
+    font-size: 30px;
+    padding: 10px 18px;
+    border-radius: 50%;
+}
